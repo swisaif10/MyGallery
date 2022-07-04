@@ -3,34 +3,35 @@
 ### Architecture 
 ##### MVVM :   Comme avantages de MVVM nous pouvons citer:
 
+
 **La maintenabilité:** Avec une séparation claire des différents modules du projet, il y’a une meilleure organisation structurelle, le code est plus lisible, mieux architecturé car respectant des standards bien définis et donc plus facile à maintenir. Les fonctionnalités étant regroupées dans dans le ViewModel, cela permet d’avoir des vues propres, dépourvues de code ‘spaghettis’.
 
 **La testabilité:** Avec MVVM chaque bout de code est écrit de façon granulaire, les dépendances internes et externes sont séparées de la logique métier et l’ensemble des fonctionnalités à tester. Ce qui rend le code bien plus testable.
 
 **La réutilisabilité et l’extensibilité du code:** MVVM facilite la possibilité d’ajout et de réutilisation du code par le principe de faible couplage de classes, cela a pour bénéfice de diminuer les risques de lourdes dettes techniques lors de maintenances évolutives.
 ##### Test :
-On Utilisant JUnit4 et Truth.</br>
-Le test ce fait pour les viewModels.
+En Utilisant JUnit4 et Truth.</br>
+Le test se fait pour les viewModels.
 ##### Clean Code: les principes SOLID
 ###### Single responsability: 
-Par Exemple la méthode suivante a pour rôle la récupération des données dépuis un data source, donc le seul raison pour changer cette méthode par exemple c'est pour changer le data source.</br> </br><img width="566" alt="image" src="https://user-images.githubusercontent.com/25714864/177047593-af8ebd6a-9302-4402-a8aa-0599c79bf9ee.png">
+Par Exemple la méthode suivante a pour rôle la récupération des données dépuis un data source, donc la seul raison pour changer cette méthode par exemple c'est pour changer le data source.</br> </br><img width="566" alt="image" src="https://user-images.githubusercontent.com/25714864/177047593-af8ebd6a-9302-4402-a8aa-0599c79bf9ee.png">
 ###### Open/Closed : 
 On va créer une interface ou une class abstraite : </br>
 <img width="395" alt="image" src="https://user-images.githubusercontent.com/25714864/177048227-6ef09636-dcce-4edc-8355-51db3d7b6d02.png">
 </br>
-Maintenant si les autres classes implémente (ou hérite) l'interface (ou la classe abstraite) il doit just redéfinir les méthodes et ajouter des autre méthodes s'il est nécessaire. </br>
+Maintenant si les autres classes implémentent (ou héritent) l'interface (ou la classe abstraite) ,elle doivent just redéfinir les méthodes et ajouter des autres méthodes s'il est nécessaire. </br>
 <img width="575" alt="image" src="https://user-images.githubusercontent.com/25714864/177048363-9400a8f3-d63e-4ac1-a70c-29e549ae8f1c.png">
 </br> 
 ###### Liskov substitution : 
-Les classes parents sont remplacable par les classe fils sont changement de comportement ( exemple précédant )
+Les classes parents sont remplaçable par les classes fils sans changement de comportement ( exemple précédant )
 ###### Interface Segregation Principle : 
-On ne peut pas forcer les classes fis d'implémenter des méthodes qui n'ont pas besoin.
+On ne peut pas forcer les classes fils à implémenter des méthodes qui n'ont pas besoin.
 ###### Dependency Inversion Principle :
-Il faut toujours dépendent de l'abstraction :</br>
+Il faut toujours dépendre de l'abstraction :</br>
 <img width="178" alt="image" src="https://user-images.githubusercontent.com/25714864/177048895-f0b32488-8c0d-41c0-8f88-730548a97e00.png">
 </br>
-Si jamais on veut changer le backend par exemple ou bien mocké les données, on doit créer une autre implémentation tous simplement :).
-Dans notre cas Koin va injecter l'implémentation spécifique qu'on veux.
+Si jamais on veut changer le backend par exemple ou bien mocker les données, on doit créer une autre implémentation tout simplement .
+Dans notre cas Koin va injecter l'implémentation spécifique qu'on voulais.
 ### Choix des libraries: 
 ##### Koin :
 Koin est un framework d'injection de dépendance pragmatique et léger pour les développeurs Kotlin, avec un peu de code et de configuration.
@@ -52,7 +53,7 @@ Dimanche 03/07/2022 : 6 heures
 ### Améliorations: 
 - Des tests d'intégration : pour tester les navigations par exemple
 - Améliorer le UI de l'application :1) Améliorer le top bar ou bien le remplacé. </br> 2) un nouveau design pour les items de recycleView.
-- Détection de l'état de connection pour notifier l'utilisateur: Méthode prète dans le fichier utils, il me reste que l'appelé dans les bons endroits.
+- Détection de l'état de connexion pour notifier l'utilisateur: Méthode prète dans le fichier utils, il me reste que l'appeler dans les bons endroits.
 - Swipe to refresh: Ajout dans XML puis on va implémenter le listener. 
 ##### Url de l'apk :
 https://drive.google.com/file/d/1ZswkMZKWWZvAfPEScHtVrWOyFDVuaQvv/view?usp=sharing
