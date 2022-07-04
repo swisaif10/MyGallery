@@ -52,7 +52,7 @@ Samedi 02 juillet 2022 : 2 heures </br>
 Dimanche 03/07/2022 : 6 heures
 ### Améliorations: 
 - Des tests d'intégration : pour tester les navigations par exemple
-- Améliorer le UI de l'application :1) Améliorer le top bar ou bien le remplacé. </br> 2) un nouveau design pour les items de recycleView.
+- Améliorer le UI de l'application :</br>1) Améliorer le top bar ou bien le remplacé. </br> 2) un nouveau design pour les items de recycleView.
 - Détection de l'état de connexion pour notifier l'utilisateur: Méthode prète dans le fichier utils, il me reste que l'appeler dans les bons endroits.
 - Swipe to refresh: Ajout dans XML puis on va implémenter le listener. 
 ##### Url de l'apk :
